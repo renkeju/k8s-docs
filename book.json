@@ -1,11 +1,36 @@
 {
+    "title": "Kubernetes Documentation",
+    "author": "renkeju",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "structure": {
+        "readme": "README.md"
+    },
+    "links": {
+        "sidebar": {
+            "Home": "https://kubernetes.renkeju.com"
+        }
+    },
     "plugins": [
-        "favicon"
+        "-lunr",
+        "-search",
+        "search-plus",
+        "github",
+        "todo",
+        "terminal",
+        "custom-favicon"
     ],
     "pluginsConfig": {
-        "favicon": {
-            "shortcut": "images/favicon.ico",
-            "bookmark": "images/favicon.ico"
+        "favicon": "images/favicon.png",
+        "github": {
+            "url": "https://github.com/renkeju"
+        },
+        "terminal": {
+            "copyButtons": true,
+            "fade": false,
+            "style": "flat"
         }
     }
 }
