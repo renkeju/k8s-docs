@@ -40,8 +40,8 @@ Kubernetes 的正确运行依赖于一些基础环境的设定，如各节点时
 
 ```
 **[terminal]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command systemctl start chronyd.service]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command systemctl enable chronyd.service]
+**[path  ~]]**[delimiter  # ]**[command systemctl start chronyd.service]
+**[path  ~]]**[delimiter  # ]**[command systemctl enable chronyd.service]
 ```
 
 ### (3) 关闭防火墙服务
@@ -50,9 +50,9 @@ Kubernetes 的正确运行依赖于一些基础环境的设定，如各节点时
 
 ```
 **[terminal]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command systemctl stop firewalld.service iptables.service]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command systemctl disable firewalld.service]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command systemctl disable ipatbles.service]
+**[path  ~]]**[delimiter  # ]**[command systemctl stop firewalld.service iptables.service]
+**[path  ~]]**[delimiter  # ]**[command systemctl disable firewalld.service]
+**[path  ~]]**[delimiter  # ]**[command systemctl disable ipatbles.service]
 ```
 
 ### (4) 关闭并禁用 SELinux
@@ -61,14 +61,14 @@ Kubernetes 的正确运行依赖于一些基础环境的设定，如各节点时
 
 ```
 **[terminal]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command setenforce 0]
+**[path  ~]]**[delimiter  # ]**[command setenforce 0]
 ```
 
 另外，编辑 `/etc/sysconfig/selinux` 文件，以彻底禁用 SELinux：
 
 ```
 **[terminal]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command sed -i 's@^\(SELINUX=\).*@\1disabled@' /etc/sysconfig/selinux]
+**[path  ~]]**[delimiter  # ]**[command sed -i 's@^\(SELINUX=\).*@\1disabled@' /etc/sysconfig/selinux]
 ```
 
 ### (5) 禁用 Swap 设备（可选步骤）
@@ -77,7 +77,7 @@ kubeadm 默认会预先检查当前主机是否禁用了 Swap 设备，并在未
 
 ```
 **[terminal]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command swapoff -a]
+**[path  ~]]**[delimiter  # ]**[command swapoff -a]
 ```
 
 而后编辑 `/etc/fstab` 配置文件，注释用于挂载 Swap 设备的所有行。不同系统环境默认启用的 Swap 设备是不尽相同的，请读者根据实际情况完成响应操作。另外，部署时也可以选不禁用 Swap，而是通过后文的 kubeadm init 及 kubeadm join 命令执行时额外使用相关的选项忽略检查错误。
@@ -101,8 +101,8 @@ done
 
 ```
 **[terminal]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command chmod +x /etc/sysconfig/modules/ipvs.modules]
-**[prompt root@master]**[path  ~]**[delimiter  # ]**[command /etc/sysconfig/modules/ipvs.modules]
+**[path  ~]]**[delimiter  # ]**[command chmod +x /etc/sysconfig/modules/ipvs.modules]
+**[path  ~]]**[delimiter  # ]**[command /etc/sysconfig/modules/ipvs.modules]
 ```
 
 不过，ipvs 仅负责实现负载均衡相关的任务，它无法完成 kube-proxy 中的包过滤及 SNAT 等功能，这些仍需要由 iptables 实现。另外，对于初学者来说，前期的测试并非必然要用到 ipvs 代理模式。部署时可以省略此步骤。
