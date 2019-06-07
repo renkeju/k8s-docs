@@ -9,7 +9,7 @@ Kubernetes 支持多种容器运行时环境，例如 Docker、RKT 和 Frakti �
 ```
 **[terminal]
 **[path  ~]]**[delimiter  # ]**[command wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo]
-**[path  ~]]**[delimiter  # ]**[command yum install docker-ce]
+**[path  ~]]**[delimiter  # ]**[command yum install docker-ce-18.06.1.ce-3.el7.x86_64]
 ```
 
 > kubeadm 构建集群的过程需要到 gcr.io 中获取 Docker 镜像，因此必须确保 Docker 主机能够正常访问到此站点，否则，就得配置 Docker 以代理的方式访问 gcr.io，或者配置 kubeadm 从其他 Registry 获取相关的镜像。代理的方法是在 [service] 配置段中添加类似如下格式的配置项：`Environment="HTTP_PROXY=http://IP:PORT"` 或 `Environment="HTTPS_PROXY=https://IP:PORT"` 。

@@ -71,7 +71,31 @@ Kubernetes 的正确运行依赖于一些基础环境的设定，如各节点时
 **[path  ~]]**[delimiter  # ]**[command sed -i 's@^\(SELINUX=\).*@\1disabled@' /etc/sysconfig/selinux]
 ```
 
-### (5) 禁用 Swap 设备（可选步骤）
+### (5) 设置 iptables 对 bridge 的数据进行处理
+
+在网桥默认的参数中，iptables 设置不对 bridge 的数据进行处理。如果需要临时修改其当前为开启：
+
+```
+**[terminal]
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command echo "1" > /proc/sys/net/bridge/bridge-nf-call-iptables]
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command echo "1" > /proc/sys/net/bridge/bridge-nf-call-ip6tables]
+```
+
+另外，在 `/etc/sysctl.conf` 文件中提添加如下两行配置，则永久开启 bridge-nf-call:
+
+```
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+```
+
+添加完成后，使用下面命令执行生效 `/etc/sysctl.conf`:
+
+```
+**[terminal]
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command sysctl -p]
+```
+
+### (6) 禁用 Swap 设备（可选步骤）
 
 kubeadm 默认会预先检查当前主机是否禁用了 Swap 设备，并在未禁用时强制终止部署过程。因此，在主机内存资源充裕的条件下，需要分两步完成。首先是关闭当前已启用的所有 Swap 设备：
 
@@ -82,7 +106,7 @@ kubeadm 默认会预先检查当前主机是否禁用了 Swap 设备，并在未
 
 而后编辑 `/etc/fstab` 配置文件，注释用于挂载 Swap 设备的所有行。不同系统环境默认启用的 Swap 设备是不尽相同的，请读者根据实际情况完成响应操作。另外，部署时也可以选不禁用 Swap，而是通过后文的 kubeadm init 及 kubeadm join 命令执行时额外使用相关的选项忽略检查错误。
 
-### (6) 启用 ipvs 内核模块（可选步骤）
+### (7) 启用 ipvs 内核模块（可选步骤）
 
 Kubernetes 1.11 之后的版本默认支持使用 ipvs 代理模式的 Service 资源，但它依赖于 ipvs 相关的内核模块，而这些模块默认不会自动载入。因此，这里选择创建载入内核模块相关的脚本文件 `/etc/sysconfig/modules/ipvs.modules` ，设定于系统引导时自动载入的 ipvs 相关的内核模块，以支持使用 ipvs 代理模式的 Service 资源。文件内容如下：
 

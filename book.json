@@ -20,6 +20,8 @@
         "github",
         "todo",
         "terminal",
+        "anchors",
+        "edit-link",
         "custom-favicon"
     ],
     "pluginsConfig": {
@@ -29,8 +31,19 @@
         },
         "terminal": {
             "copyButtons": true,
-            "fade": false,
+            "fade": true,
             "style": "flat"
+        },
+        "anchor-navigation-ex": {
+            "isRewritePageTitle": true,
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+        "edit-link": {
+            "base": "https://github.com/renkeju/kubernetes/edit/master",
+            "label": "Edit This Page"
         }
     }
 }
