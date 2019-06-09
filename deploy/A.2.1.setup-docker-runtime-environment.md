@@ -9,7 +9,7 @@ Kubernetes 支持多种容器运行时环境，例如 Docker、RKT 和 Frakti �
 ```
 **[terminal]
 **[path  ~]]**[delimiter  # ]**[command wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo]
-**[path  ~]]**[delimiter  # ]**[command yum install docker-ce-18.06.1.ce-3.el7.x86_64]
+**[path  ~]]**[delimiter  # ]**[command yum install docker-ce]
 ```
 
 > kubeadm 构建集群的过程需要到 gcr.io 中获取 Docker 镜像，因此必须确保 Docker 主机能够正常访问到此站点，否则，就得配置 Docker 以代理的方式访问 gcr.io，或者配置 kubeadm 从其他 Registry 获取相关的镜像。代理的方法是在 [service] 配置段中添加类似如下格式的配置项：`Environment="HTTP_PROXY=http://IP:PORT"` 或 `Environment="HTTPS_PROXY=https://IP:PORT"` 。
@@ -30,3 +30,51 @@ ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT
 ```
 
 > 国内访问 DockerHub 下载镜像的速度较缓慢，建议使用国内的镜像对其进行加速，如 https://registry.docker-cn.com ，另外，中国科技大学也提供了公共可用的镜像加速服务，其 URL 为 https://docker.mirrors.ustc.edu.cn ，将其定义在 daemon.json 中重启 Docker 即可使用。
+
+## 设置 Docker daemon 配置文件
+
+Docker 默认的 cgroup驱动程序为 “cgroupfs”，kubernetes 推荐的驱动程序是“ systemd”。所以我们可以通过修改 `/etc/docker/daemon.json` 来修改 Docker cgroup 驱动程序。
+
+```
+cat > /etc/docker/daemon.json <<EOF
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2",
+  "storage-opts": [
+    "overlay2.override_kernel_check=true"
+  ]
+}
+```
+
+## CRI-O
+
+本节包含将CRI-O安装为CRI运行时的必要步骤。
+
+使用以下命令在系统上安装CRI-O：
+
+* 先决条件
+
+    ```
+    modprobe overlay
+    modprobe br_netfilter
+
+    # Setup required sysctl params, these persist across reboots.
+    cat > /etc/sysctl.d/99-kubernetes-cri.conf <<EOF
+    net.bridge.bridge-nf-call-iptables  = 1
+    net.ipv4.ip_forward                 = 1
+    net.bridge.bridge-nf-call-ip6tables = 1
+    EOF
+
+    sysctl --system
+    ```
+
+```
+**[terminal]
+**[path  ~]]**[delimiter  # ]**[command yum-config-manager --add-repo=https://cbs.centos.org/repos/paas7-crio-311-candidate/x86_64/os/]
+**[path  ~]]**[delimiter  # ]**[command yum install --nogpgcheck cri-o]
+**[path  ~]]**[delimiter  # ]**[command systemctl start crio]
+```

@@ -28,7 +28,7 @@ gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors
 
 ```
 **[terminal]
-[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command yum install kubeadm-1.12.1 kubelet-1.12.1 kubectl-1.12.1 kubernetes-cni-0.6.0]
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command yum install kubeadm kubelet kubectl kubernetes-cni]
 ```
 
 ## 2. 配置 kubelet
