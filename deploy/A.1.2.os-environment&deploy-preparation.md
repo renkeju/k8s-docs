@@ -14,10 +14,10 @@
 
 |IP 地址|主机名|角色|
 |:-:|:-:|:-:|
-|172.16.0.70|master, master.renkeju.mobi|master|
-|172.16.0.66|node01, node01.renkeju.mobi|node|
-|172.16.0.67|node02, node02.renkeju.mobi|node|
-|172.16.0.68|node03, node03.renkeju.mobi|node|
+|172.16.0.6|master, master.renkeju.mobi|master|
+|172.16.0.7|node01, node01.renkeju.mobi|node|
+|172.16.0.8|node02, node02.renkeju.mobi|node|
+|172.16.0.9|node03, node03.renkeju.mobi|node|
 
 ## 2. 基础环境设置
 
@@ -28,10 +28,10 @@ Kubernetes 的正确运行依赖于一些基础环境的设定，如各节点时
 分布式系统环境中的多主机通信通常基于主机名称进行，这在 IP 地址存在变化的可能性时为主机提供了固定的访问入口，因此一般需要由专用的 DNS 服务负责解决各节点主机名。不过，考虑到此处部署的是测试集群，因此为了降低系统复杂度，这里将采用基于 hosts 的文件进行主机名称解析。编辑 Master 和各 Node 上的 /etc/hosts 文件，确保其内容如下：
 
 ```none
-172.16.0.66 node01.renkeju.mobi node01
-172.16.0.67 node02.renkeju.mobi node02
-172.16.0.68 node03.renkeju.mobi node03
-172.16.0.69 master.renkeju.mobi master
+172.16.0.6 master.renkeju.mobi master
+172.16.0.7 node01.renkeju.mobi node01
+172.16.0.8 node02.renkeju.mobi node02
+172.16.0.9 node03.renkeju.mobi node03
 ```
 
 ### (2) 主机时间同步
