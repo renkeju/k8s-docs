@@ -2,7 +2,7 @@
 
  如果忘记了记录 Master 主机的 kubeadm init 命令执行结果中用于让节点加入集群的 kubeadm join 命令及其认证信息，则需要分别通过 kubectl 获取认证令牌及验证 CA 公钥的哈希值。
 
- “kubeadm token list” 能够获取到集群上存在认证令牌，定位到其中 DESCRIPTION 字段中标示为由 “kubeadm init” 命令生成的行，其第一字段 TOKEN 中的令牌即为认证令牌。而验证CA公钥的哈希值（discovery-token-ca-cert-hash）的获取命令则略微复杂，其完成格式如下所示：
+ `kubeadm token list` 能够获取到集群上存在认证令牌，定位到其中 DESCRIPTION 字段中标示为由 `kubeadm init` 命令生成的行，其第一字段 TOKEN 中的令牌即为认证令牌。而验证CA公钥的哈希值（discovery-token-ca-cert-hash）的获取命令则略微复杂，其完成格式如下所示：
 
  ```
 **[terminal]

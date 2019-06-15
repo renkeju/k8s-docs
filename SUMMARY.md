@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [A 部署 Kubernetes](deploy/README.md)
     * [A.1 准备部署 Kubernetes 集群](deploy/A.1.ready-to-deploy-kubernetes-cluster.md)
         * [A.1.1 部署目标](deploy/A.1.1.deploy-target.md)
@@ -14,4 +15,9 @@
         * [A.2.7 获取集群状态信息](deploy/A.2.7.get-cluster-status-information.md)
     * [A.3 从集群中移除节点](deploy/A.3.remove-a-node-from-the-cluster.md)
     * [A.4 重新生成用于节点加入集群的认证命令](deploy/A.4.Regenerate-the-authentication-command-for-the-node-to-join-the-cluster.md)
+* [B 部署 GlusterFS 及 Heketi](deploy/B-chapter-deploy-GlusterFS-and-Heketi.md)
+    * [B.1 部署 GlusterFS 集群](deploy/B.1.deploy-GlusterFS-cluster.md)
+    * [B.2 部署 Heketi](deploy/B.2.deploy-Heketi.md)
+        * [B.2.1 安装并启动 Heketi 服务器](deploy/B.2.1.install-and-start-Heketi-server.md)
+        * [B.2.2 设置 Heketi 系统拓扑](deploy/B.2.2.setup-Heketi-system-topology.md)
 

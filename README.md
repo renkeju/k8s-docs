@@ -12,6 +12,11 @@
 [12]: deploy/A.2.7.get-cluster-status-information.md
 [13]: deploy/A.3.remove-a-node-from-the-cluster.md
 [14]: deploy/A.4.Regenerate-the-authentication-command-for-the-node-to-join-the-cluster.md
+[15]: deploy/B-chapter-deploy-GlusterFS-and-Heketi.md
+[16]: deploy/B.1.deploy-GlusterFS-cluster.md
+[17]: deploy/B.2.deploy-Heketi.md
+[18]: deploy/B.2.1.install-and-start-Heketi-server.md
+[19]: deploy/B.2.2.setup-Heketi-system-topology.md 
 
 ![Kubernetes](/images/kubernetes-logo.png)
 
@@ -31,3 +36,8 @@
         * [A.2.7 获取集群状态信息][12]
     * [A.3 从集群中移除节点][13]
     * [A.4 重新生成用于节点加入集群的认证命令][14]
+* [B 部署 GlusterFS 及 Heketi][15]
+    * [B.1 部署 GlusterFS 集群][16]
+    * [B.2 部署 Heketi][17]
+        * [B.2.1 安装并启动 Heketi 服务器][18]
+        * [B.2.2 设置 Heketi 系统拓扑][19]

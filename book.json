@@ -11,6 +11,12 @@
     "links": {
         "sidebar": {
             "Home": "https://kubernetes.renkeju.mobi"
+        },
+        "gitbook": false,
+        "sharing": {
+            "twitter": false,
+            "facebook": false,
+            "all": false
         }
     },
     "plugins": [
@@ -22,28 +28,34 @@
         "terminal",
         "anchors",
         "edit-link",
+        "image-captions",
+        "popup",
         "custom-favicon"
     ],
     "pluginsConfig": {
         "favicon": "images/favicon.png",
         "github": {
-            "url": "https://github.com/renkeju"
+            "url": "https://github.com/renkeju/kubernetes"
         },
         "terminal": {
             "copyButtons": true,
             "fade": true,
             "style": "flat"
         },
-        "anchor-navigation-ex": {
-            "isRewritePageTitle": true,
-            "isShowTocTitleIcon": true,
-            "tocLevel1Icon": "fa fa-hand-o-right",
-            "tocLevel2Icon": "fa fa-hand-o-right",
-            "tocLevel3Icon": "fa fa-hand-o-right"
-        },
         "edit-link": {
             "base": "https://github.com/renkeju/kubernetes/edit/master",
             "label": "Edit This Page"
+        },
+        "image-captions": {
+            "caption": "图 _PAGE_LEVEL_ - _CAPTION_ ",
+            "images": {
+                "1.1.1": {
+                    "skip": true
+                },
+                "1.1.2": {
+                    "skip": true
+                }
+            }
         }
     }
 }
