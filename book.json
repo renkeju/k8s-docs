@@ -8,6 +8,12 @@
     "structure": {
         "readme": "README.md"
     },
+    "styles" : {
+        "website" : "assets/css/WebStyle.css",
+        "pdf" : "assets/css/PdfStyle.css",
+        "mobi" : "assets/css/MobiStyle.css",
+        "epub" : "assets/css/EpubStyle.css"
+    },
     "links": {
         "sidebar": {
             "Home": "https://kubernetes.renkeju.mobi"
@@ -29,6 +35,7 @@
         "anchors",
         "edit-link",
         "image-captions",
+        "image-wrapper",
         "popup",
         "custom-favicon"
     ],
@@ -44,7 +51,7 @@
         },
         "edit-link": {
             "base": "https://github.com/renkeju/kubernetes/edit/master",
-            "label": "Edit This Page"
+            "label": "编辑这个页面"
         },
         "image-captions": {
             "caption": "图 _PAGE_LEVEL_ - _CAPTION_ ",
