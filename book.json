@@ -42,7 +42,7 @@
     "pluginsConfig": {
         "favicon": "images/favicon.png",
         "github": {
-            "url": "https://github.com/renkeju/kubernetes"
+            "url": "https://github.com/renkeju/k8s-docs"
         },
         "terminal": {
             "copyButtons": true,
@@ -50,7 +50,7 @@
             "style": "flat"
         },
         "edit-link": {
-            "base": "https://github.com/renkeju/kubernetes/edit/master",
+            "base": "https://github.com/renkeju/k8s-docs/edit/master",
             "label": "编辑这个页面"
         },
         "image-captions": {

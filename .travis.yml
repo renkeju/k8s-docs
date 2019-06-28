@@ -31,4 +31,4 @@ branches:
 
 env:
   global:
-    - REF=github.com/renkeju/kubernetes.git
+    - REF=github.com/renkeju/k8s-docs.git
