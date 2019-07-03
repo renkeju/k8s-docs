@@ -20,7 +20,7 @@
 
 ![Kubernetes](/images/kubernetes-logo.png)
 
-[![Build Status](https://travis-ci.org/renkeju/kubernetes.svg?branch=master)](https://travis-ci.org/renkeju/kubernetes)
+[![Build Status](https://travis-ci.com/renkeju/k8s-docs.svg?branch=master)](https://travis-ci.com/renkeju/k8s-docs)
 
 * [A 部署 Kubernetes][1]
     * [A.1 准备部署 Kubernetes 集群][2]
