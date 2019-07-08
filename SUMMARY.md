@@ -25,4 +25,11 @@
         * [2.1.1 Pod 资源对象](chapter_2/2.1.1.pod-resource-object.md)
         * [2.1.2 Controller](chapter_2/2.1.2.controller.md)
         * [2.1.3 Service](chapter_2/2.1.3.service.md)
+        * [2.1.4 部署应用程序的主体过程](chapter_2/2.1.4.deploy_the_main_process_of_the_application.md)
+    * [2.2 部署 Kubernetes 集群](chapter_2/2.2.deploy_kubernetes_cluster.md)
+        * [2.2.1 kubeadm 部署工具](chapter_2/2.2.1.kubeadm_deploy_tool.md)
+        * [2.2.2 集群运行模式](chapter_2/2.2.2.cluster_cluster_operation_mode.md)
+        * [2.2.3 准备用于实践操作的集群环境](chapter_2/2.2.3.prepare_a_clustered_environment_for_hands-on_operations.md)
+        * [2.2.4 获取集群环境相关的信息](chapter_2/2.2.4.get_information_about_the_cluster_environment.md)
+    * [2.3 kubectl 使用基础与示例](chapter_2/2.3.kubectl_use_the_basics_and_examples.md)
 
