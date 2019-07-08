@@ -16,7 +16,19 @@
 [16]: deploy/B.1.deploy-GlusterFS-cluster.md
 [17]: deploy/B.2.deploy-Heketi.md
 [18]: deploy/B.2.1.install-and-start-Heketi-server.md
-[19]: deploy/B.2.2.setup-Heketi-system-topology.md 
+[19]: deploy/B.2.2.setup-Heketi-system-topology.md
+[20]: chapter_2/2.kubernetes_quick_start.md
+[21]: chapter_2/2.1.core_object_of_kubernetes.md
+[22]: chapter_2/2.1.1.pod-resource-object.md
+[23]: chapter_2/2.1.2.controller.md
+[24]: chapter_2/2.1.3.service.md
+[25]: chapter_2/2.1.4.deploy_the_main_process_of_the_application.md
+[26]: chapter_2/2.2.deploy_kubernetes_cluster.md
+[27]: chapter_2/2.2.1.kubeadm_deploy_tool.md
+[28]: chapter_2/2.2.2.cluster_cluster_operation_mode.md
+[29]: chapter_2/2.2.3.prepare_a_clustered_environment_for_hands-on_operations.md
+[30]: chapter_2/2.2.4.get_information_about_the_cluster_environment.md
+[31]: chapter_2/2.3.kubectl_use_the_basics_and_examples.md
 
 ![Kubernetes](/images/kubernetes-logo.png)
 
@@ -41,3 +53,15 @@
     * [B.2 部署 Heketi][17]
         * [B.2.1 安装并启动 Heketi 服务器][18]
         * [B.2.2 设置 Heketi 系统拓扑][19]
+* [2 kubernetes 快速入门][20]
+    * [2.1 Kubernetes 的核心对象][21]
+        * [2.1.1 Pod 资源对象][22]
+        * [2.1.2 Controller][23]
+        * [2.1.3 Service][24]
+        * [2.1.4 部署应用程序的主体过程][25]
+    * [2.2 部署 Kubernetes 集群][26]
+        * [2.2.1 kubeadm 部署工具][27]
+        * [2.2.2 集群运行模式][28]
+        * [2.2.3 准备用于实践操作的集群环境][29]
+        * [2.2.4 获取集群环境相关的信息][30]
+    * [2.3 kubectl 使用基础与示例][31]
