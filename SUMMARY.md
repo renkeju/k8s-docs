@@ -32,4 +32,6 @@
         * [2.2.3 准备用于实践操作的集群环境](chapter_2/2.2.3.prepare_a_clustered_environment_for_hands-on_operations.md)
         * [2.2.4 获取集群环境相关的信息](chapter_2/2.2.4.get_information_about_the_cluster_environment.md)
     * [2.3 kubectl 使用基础与示例](chapter_2/2.3.kubectl_use_the_basics_and_examples.md)
+    * [2.4 命令式容器应用编排](chapter_2/2.4.imperative_container_application_orchestration.md)
+        * [2.4.1 部署应用（Pod）](chapter_2/2.4.1.deploy_applications.md)
 

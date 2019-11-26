@@ -29,6 +29,7 @@
 [29]: chapter_2/2.2.3.prepare_a_clustered_environment_for_hands-on_operations.md
 [30]: chapter_2/2.2.4.get_information_about_the_cluster_environment.md
 [31]: chapter_2/2.3.kubectl_use_the_basics_and_examples.md
+[32]: chapter_2/2.4.imperative_container_application_orchestration.md
 
 ![Kubernetes](/images/kubernetes-logo.png)
 
@@ -65,3 +66,4 @@
         * [2.2.3 准备用于实践操作的集群环境][29]
         * [2.2.4 获取集群环境相关的信息][30]
     * [2.3 kubectl 使用基础与示例][31]
+    * [2.4 命令式容器应用编排][32]
