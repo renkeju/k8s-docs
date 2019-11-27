@@ -30,6 +30,7 @@
 [30]: chapter_2/2.2.4.get_information_about_the_cluster_environment.md
 [31]: chapter_2/2.3.kubectl_use_the_basics_and_examples.md
 [32]: chapter_2/2.4.imperative_container_application_orchestration.md
+[33]: chapter_2/2.4.1.deploy_applications.md
 
 ![Kubernetes](/images/kubernetes-logo.png)
 
@@ -67,3 +68,4 @@
         * [2.2.4 获取集群环境相关的信息][30]
     * [2.3 kubectl 使用基础与示例][31]
     * [2.4 命令式容器应用编排][32]
+        * [2.4.1 部署应用（Pod）][33]

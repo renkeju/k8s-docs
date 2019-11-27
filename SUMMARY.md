@@ -34,4 +34,6 @@
     * [2.3 kubectl 使用基础与示例](chapter_2/2.3.kubectl_use_the_basics_and_examples.md)
     * [2.4 命令式容器应用编排](chapter_2/2.4.imperative_container_application_orchestration.md)
         * [2.4.1 部署应用（Pod）](chapter_2/2.4.1.deploy_applications.md)
+        * [2.4.2 探查 Pod 及应用详情](chapter_2/2.4.2.Probe_pods_and_application_details.md)
+        * [2.4.3 部署 Service 对象](chapter_2/2.4.3.deploy_service_object.md)
 
