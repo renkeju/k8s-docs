@@ -31,6 +31,10 @@
 [31]: chapter_2/2.3.kubectl_use_the_basics_and_examples.md
 [32]: chapter_2/2.4.imperative_container_application_orchestration.md
 [33]: chapter_2/2.4.1.deploy_applications.md
+[34]: chapter_2/2.4.2.Probe_pods_and_application_details.md
+[35]: chapter_2/2.4.3.deploy_service_object.md
+[36]: chapter_2/2.4.4.expansion_and_reduction.md
+[37]: chapter_2/2.4.5.modify_and_delete_objects.md
 
 ![Kubernetes](/images/kubernetes-logo.png)
 
@@ -69,3 +73,7 @@
     * [2.3 kubectl 使用基础与示例][31]
     * [2.4 命令式容器应用编排][32]
         * [2.4.1 部署应用（Pod）][33]
+        * [2.4.2 探查 Pod 及应用详情][34]
+        * [2.4.3 部署 Service 对象][35]
+        * [2.4.4 扩容和缩容][36]
+        * [2.4.5 修改及删除对象][37]

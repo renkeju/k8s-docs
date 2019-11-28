@@ -20,7 +20,7 @@
     * [B.2 部署 Heketi](deploy/B.2.deploy-Heketi.md)
         * [B.2.1 安装并启动 Heketi 服务器](deploy/B.2.1.install-and-start-Heketi-server.md)
         * [B.2.2 设置 Heketi 系统拓扑](deploy/B.2.2.setup-Heketi-system-topology.md)
-* [2 kubernetes 快速入门](chapter_2/2.kubernetes_quick_start.md)
+* [第二章 kubernetes 快速入门](chapter_2/2.kubernetes_quick_start.md)
     * [2.1 Kubernetes 的核心对象](chapter_2/2.1.core_object_of_kubernetes.md)
         * [2.1.1 Pod 资源对象](chapter_2/2.1.1.pod-resource-object.md)
         * [2.1.2 Controller](chapter_2/2.1.2.controller.md)
@@ -36,4 +36,6 @@
         * [2.4.1 部署应用（Pod）](chapter_2/2.4.1.deploy_applications.md)
         * [2.4.2 探查 Pod 及应用详情](chapter_2/2.4.2.Probe_pods_and_application_details.md)
         * [2.4.3 部署 Service 对象](chapter_2/2.4.3.deploy_service_object.md)
+        * [2.4.4 扩容和缩容](chapter_2/2.4.4.expansion_and_reduction.md)
+        * [2.4.5 修改及删除对象](chapter_2/2.4.5.modify_and_delete_objects.md)
 

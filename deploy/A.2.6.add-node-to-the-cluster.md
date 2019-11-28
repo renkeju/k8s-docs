@@ -16,12 +16,12 @@ Master 各组建运行正常后即可将各 Node 添加至集群中。配置节�
 
 ```
 **[terminal]
-[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl get nodes
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl get nodes]
 NAME                 STATUS   ROLES    AGE   VERSION
 master.renkeju.com   Ready    master   45h   v1.14.3
 node01.renkeju.com   Ready    <none>   45h   v1.14.3
 node02.renkeju.com   Ready    <none>   45h   v1.14.3
-node03.renkeju.com   Ready    <none>   45h   v1.14.3]
+node03.renkeju.com   Ready    <none>   45h   v1.14.3
 ```
 
 到此为止，使用 kubeadm 构建 Kubernetes 集群已经完成。后续若有 Node 需要加入，其方式均可使用此节介绍的方式来进行。

@@ -21,7 +21,7 @@
 
 ```
 **[terminal]
-[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command gluster peer probe gfs03.renkeju.com
+[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command gluster peer probe gfs03.renkeju.com]
 peer probe: success.
 [root@gfs01 ~]# gluster peer status
 Number of Peers: 2
@@ -32,5 +32,5 @@ State: Peer in Cluster (Connected)
 
 Hostname: gfs03.renkeju.com
 Uuid: e1b8caf5-6f58-4082-b492-9f63ee6d5704
-State: Peer in Cluster (Connected)]
+State: Peer in Cluster (Connected)
 ```

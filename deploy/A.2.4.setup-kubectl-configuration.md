@@ -12,11 +12,11 @@ kubectl 是执行 Kubernetes 集群管理的核心工具。默认情况下，kub
 
 ```
 **[terminal]
-[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl get cs
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl get cs]
 NAME                 STATUS    MESSAGE             ERROR
 controller-manager   Healthy   ok
 scheduler            Healthy   ok
-etcd-0               Healthy   {"health":"true"}]
+etcd-0               Healthy   {"health":"true"}
 ```
 
 若上面命令结果的 STATUS 字段为 “Healthy”，则表示组建处于健康运行状态，否则需要检查其错误所在，必要时可使用 “kubeadm reset” 命令重置之后重新进行集群初始化。
@@ -25,7 +25,7 @@ etcd-0               Healthy   {"health":"true"}]
 
 ```
 **[terminal]
-[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl get nodes
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl get nodes]
 NAME                 STATUS   ROLES    AGE    VERSION
-master.renkeju.com   NotReady    master   108s   v1.14.3]
+master.renkeju.com   NotReady    master   108s   v1.14.3
 ```

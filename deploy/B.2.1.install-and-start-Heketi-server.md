@@ -62,8 +62,8 @@
 
 ```
 **[terminal]
-[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command curl http://gfs01.renkeju.com:8080/hello
-Hello from Heketi]
+[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command curl http://gfs01.renkeju.com:8080/hello]
+Hello from Heketi
 ```
 
 若 Heketi 启用了认证功能，则需要使用 heketi-cli 命令进行测试，命令格式如下：

@@ -83,7 +83,7 @@
 
 ```
 **[terminal]
-[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command heketi-cli cluster info f97313b9354866c7dc1b9f21a341605c
+[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command heketi-cli cluster info f97313b9354866c7dc1b9f21a341605c]
 Cluster id: f97313b9354866c7dc1b9f21a341605c
 Nodes:
 62db8b2082e97bf5408b258d6a61c2a8
@@ -93,14 +93,14 @@ Volumes:
 
 Block: true
 
-File: true] 
+File: true
 ```
 
 `heketi-cli volume create --size=<size in Gb> [options]` 能够创建存储卷，例如，下面的命令测试即用测试即用于创建一个存储卷：
 
 ```
 **[terminal]
-[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command heketi-cli volume create --size=2
+[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command heketi-cli volume create --size=2]
 Name: vol_a7b311867ae269d1e705f8a772e2b253
 Size: 2
 Volume Id: a7b311867ae269d1e705f8a772e2b253
@@ -113,15 +113,15 @@ Reserved Size: 0
 Block Hosting Restriction: (none)
 Block Volumes: []
 Durability Type: replicate
-Distributed+Replica: 3]
+Distributed+Replica: 3
 ```
 
 而后在要使用远程存储卷的节点上安装 GlusterFS 和 glusterfs-fuse 的程序包，提供 GlusterFS 客户端驱动及对 GlusterFS 文件系统的运行，并基于 GlusterFS 文件系统类型挂载使用确认无误后即可删除测试卷。删除 Heketi 卷的命令为 `heketi-cli volume delete <vol_id>`，如何删除前面创建的存储卷，可使用以下的命令：
 
 ```
 **[terminal]
-[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command heketi-cli volume delete a7b311867ae269d1e705f8a772e2b253 
-Volume a7b311867ae269d1e705f8a772e2b253 deleted]
+[**[prompt root@gfs01]**[path  ~]]**[delimiter  # ]**[command heketi-cli volume delete a7b311867ae269d1e705f8a772e2b253]
+Volume a7b311867ae269d1e705f8a772e2b253 deleted
 ```
 
 至此为止，一个支持动态存储卷配置的 GlusterFS 存储集群即设置完成，用户即可于 Kubernetes 中通过 PVC 请求使用某事先创建完成的 GlusterFS 存储卷，也可把 Heketi 配置为存储类，而后提供 PV 的动态供给功能。

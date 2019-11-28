@@ -4,18 +4,18 @@ Kubernetes 集群以及部署的插件提供了多种不同的服务，如此前
 
 ```
 **[terminal]
-[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl cluster-info
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl cluster-info]
 Kubernetes master is running at https://172.16.0.6:6443
 KubeDNS is running at https://172.16.0.6:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.]
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 
 Kubernetes 集群 Server 端和 Client 端的版本等信息可以使用 `kubectl version` 命令进行查看：
 
 ```
 **[terminal]
-[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl version --short=true
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl version --short=true]
 Client Version: v1.14.3
-Server Version: v1.14.0]
+Server Version: v1.14.0
 ```

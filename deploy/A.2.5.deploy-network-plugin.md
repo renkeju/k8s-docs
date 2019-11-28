@@ -13,9 +13,9 @@ kubectl 可根据定义资源对象的清单文件将其提交给 API Server 以
 
 ```
 **[terminal]
-[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl get nodes
+[**[prompt root@master]**[path  ~]]**[delimiter  # ]**[command kubectl get nodes]
 NAME                 STATUS   ROLES    AGE   VERSION
-master.renkeju.com   Ready    master   45h   v1.14.3]
+master.renkeju.com   Ready    master   45h   v1.14.3
 ```
 
 > `kubectl get pods -n kube-system | grep flannel` 命令的结果显示 Pod 的状态为 Running 时即表示网络插件 flannel 部署完成。
