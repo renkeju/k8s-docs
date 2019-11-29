@@ -38,4 +38,8 @@
         * [2.4.3 部署 Service 对象](chapter_2/2.4.3.deploy_service_object.md)
         * [2.4.4 扩容和缩容](chapter_2/2.4.4.expansion_and_reduction.md)
         * [2.4.5 修改及删除对象](chapter_2/2.4.5.modify_and_delete_objects.md)
+* [第三章 资源管理基础](chapter_3/3.Fundamentals_of_Resource_Management.md)
+    * [3.1 资源对象及API群组](chapter_3/3.1.resource_objects_and_api_groups.md)
+        * [3.1.1 Kubernetes 的资源对象](chapter_3/3.1.1.Kubernetes的资源对象.md)
+        * [3.1.2 资源及其在API中的组织形式](chapter_3/3.1.2.Resources_and_their_organization_in_the_API.md)
 
