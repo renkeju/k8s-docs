@@ -42,4 +42,13 @@
     * [3.1 资源对象及API群组](chapter_3/3.1.resource_objects_and_api_groups.md)
         * [3.1.1 Kubernetes 的资源对象](chapter_3/3.1.1.Kubernetes的资源对象.md)
         * [3.1.2 资源及其在API中的组织形式](chapter_3/3.1.2.Resources_and_their_organization_in_the_API.md)
+        * [3.1.3 访问kubernetes REST API](chapter_3/3.1.3.access_kubernetes_REST_API.md)
+    * [3.2 对象类资源格式](chapter_3/3.2.object_class_resource_format.md)
+        * [3.2.1 资源配置清单](chapter_3/3.2.1.resource_allocation_checklist.md)
+        * [3.2.2 metadata 嵌套字段](chapter_3/3.2.2.metadata_nested_field.md)
+        * [3.2.3 spec 和 status 字段](chapter_3/3.2.3.spec_and_status_fields.md)
+        * [3.2.4 资源配置清单格式文档](chapter_3/3.2.4.resource_allocation_list_format_document.md)
+        * [3.2.5 资源对象管理方式](chapter_3/3.2.5.resource_object_management.md)
+    * [3.3 kubectl 命令与资源管理](chapter_3/3.3.kubectl_command_and_resource_management.md)
+        * [3.3.1 资源管理操作概述](chapter_3/3.3.1.overview_of_resource_management_oprations.md)
 
