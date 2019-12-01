@@ -51,4 +51,11 @@
         * [3.2.5 资源对象管理方式](chapter_3/3.2.5.resource_object_management.md)
     * [3.3 kubectl 命令与资源管理](chapter_3/3.3.kubectl_command_and_resource_management.md)
         * [3.3.1 资源管理操作概述](chapter_3/3.3.1.overview_of_resource_management_oprations.md)
+        * [3.3.2 kubectl 的基本用法](chapter_3/3.3.2.Basic_usage_of_kubectl.md)
+    * [3.4 管理名称空间资源](chapter_3/3.4.Manage_namespace_resources.md)
+        * [3.4.1 查看名称空间及其资源对象](chapter_3/3.4.1.View_namespaces_and_their_resource_objects.md)
+        * [3.4.2 管理 Namespace 资源](chapter_3/3.4.2.Manage_Namespace_resources.md)
+    * [3.5 Pod 资源的基础管理操作](chapter_3/3.5.Basic_management_operations_for_Pod_resources.md)
+        * [3.5.1 陈述式对象配置管理方式](chapter_3/3.5.1.Declarative_object_configuration_management.md)
+        * [3.5.2 声明式对象配置管理方式](chapter_3/3.5.2.Declarative_object_configuration_management.md)
 
