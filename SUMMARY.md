@@ -81,4 +81,12 @@
         * [4.5.3 Pod 生命周期中的重要行为](chapter_4/4.5.3.Important_Words_in_the_Pod_Life_Cycle.md)
         * [4.5.4 容器的重启策略](chapter_4/4.5.4.Container_restart_strategy.md)
         * [4.5.5 Pod 的终止过程](chapter_4/4.5.5.pod_termination_process.md)
+    * [4.6 Pod 存活性探测](chapter_4/4.6.Pod_survivability_probe.md)
+        * [4.6.1 设置 exec 探针](chapter_4/4.6.1.Setting_up_the_exec_probe.md)
+        * [4.6.2 设置 HTTP 探针](chapter_4/4.6.2.Setting_up_the_HTTP_probe.md)
+        * [4.6.3 设置 TCP 探针](chapter_4/4.6.3.Setting_up_the_TCP_probe.md)
+        * [4.6.4 存活性探测行为属性](chapter_4/4.6.4.Survivability_Probe_Behavior_Properties.md)
+    * [4.7 Pod 就绪性探测](chapter_4/4.7.Pod_Readiness_Detection.md)
+    * [4.8 资源需求及资源限制](chapter_4/4.8.Resource_requirements_and_resource_constraints.md)
+        * [4.8.1 资源需求](chapter_4/4.8.1.Resource_requirements.md)
 
