@@ -89,4 +89,7 @@
     * [4.7 Pod 就绪性探测](chapter_4/4.7.Pod_Readiness_Detection.md)
     * [4.8 资源需求及资源限制](chapter_4/4.8.Resource_requirements_and_resource_constraints.md)
         * [4.8.1 资源需求](chapter_4/4.8.1.Resource_requirements.md)
+        * [4.8.2 资源限制](chapter_4/4.8.2.Resource_constraints.md)
+        * [4.8.3 容器的可见资源](chapter_4/4.8.3.Container's_visible_resources.md)
+        * [4.8.4 Pod 的服务质量类比啊](chapter_4/4.8.4.Pod_quality_of_service_resources.md)
 
