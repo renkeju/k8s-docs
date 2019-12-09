@@ -103,3 +103,7 @@
         * [5.2.3 ReplicaSet 管控下的 Pod 对象](chapter_5/5.2.3.Pod_objects_under_ReplicaSet_control.md)
         * [5.2.4 更新 ReplicaSet 控制器](chapter_5/5.2.4.Update_the_ReplicaSet_controller.md)
         * [5.2.5 删除 ReplicaSet 控制器资源](chapter_5/5.2.5.Delete_the_ReplicaSet_controller_resource.md)
+    * [5.3 Deployment 控制器](chapter_5/5.3.Deployment_controller.md)
+        * [5.3.1 创建 Deployment](chapter_5/5.3.1.Create_Deployment.md)
+        * [5.3.2 更新策略](chapter_5/5.3.2.Update_strategy.md)
+
