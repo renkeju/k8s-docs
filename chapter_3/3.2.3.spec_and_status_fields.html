@@ -1,0 +1,1778 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.2.3 spec 和 status 字段 · Kubernetes Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="renkeju">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../assets/css/WebStyle.css">
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.2.4.resource_allocation_list_format_document.html" />
+    
+    
+    <link rel="prev" href="3.2.2.metadata_nested_field.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://kubernetes.renkeju.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../deploy/">
+            
+                <a href="../deploy/">
+            
+                    
+                    A 部署 Kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../deploy/A.1.ready-to-deploy-kubernetes-cluster.html">
+            
+                <a href="../deploy/A.1.ready-to-deploy-kubernetes-cluster.html">
+            
+                    
+                    A.1 准备部署 Kubernetes 集群
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../deploy/A.1.1.deploy-target.html">
+            
+                <a href="../deploy/A.1.1.deploy-target.html">
+            
+                    
+                    A.1.1 部署目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../deploy/A.1.2.os-environment&deploy-preparation.html">
+            
+                <a href="../deploy/A.1.2.os-environment&deploy-preparation.html">
+            
+                    
+                    A.1.2 系统环境及部署准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../deploy/A.2.deploy-kubernetes-cluster.html">
+            
+                <a href="../deploy/A.2.deploy-kubernetes-cluster.html">
+            
+                    
+                    A.2 部署 Kubernetes 集群
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../deploy/A.2.1.setup-docker-runtime-environment.html">
+            
+                <a href="../deploy/A.2.1.setup-docker-runtime-environment.html">
+            
+                    
+                    A.2.1 设定容器运行环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../deploy/A.2.2.setup-kubernetes-cluster-node.html">
+            
+                <a href="../deploy/A.2.2.setup-kubernetes-cluster-node.html">
+            
+                    
+                    A.2.2 设定 kubernetes 集群节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../deploy/A.2.3.cluster-initialization.html">
+            
+                <a href="../deploy/A.2.3.cluster-initialization.html">
+            
+                    
+                    A.2.3 集群初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../deploy/A.2.4.setup-kubectl-configuration.html">
+            
+                <a href="../deploy/A.2.4.setup-kubectl-configuration.html">
+            
+                    
+                    A.2.4 设定 kubectl 的配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../deploy/A.2.5.deploy-network-plugin.html">
+            
+                <a href="../deploy/A.2.5.deploy-network-plugin.html">
+            
+                    
+                    A.2.5 部署网络插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../deploy/A.2.6.add-node-to-the-cluster.html">
+            
+                <a href="../deploy/A.2.6.add-node-to-the-cluster.html">
+            
+                    
+                    A.2.6 添加 Node 到集群中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="../deploy/A.2.7.get-cluster-status-information.html">
+            
+                <a href="../deploy/A.2.7.get-cluster-status-information.html">
+            
+                    
+                    A.2.7 获取集群状态信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../deploy/A.3.remove-a-node-from-the-cluster.html">
+            
+                <a href="../deploy/A.3.remove-a-node-from-the-cluster.html">
+            
+                    
+                    A.3 从集群中移除节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../deploy/A.4.Regenerate-the-authentication-command-for-the-node-to-join-the-cluster.html">
+            
+                <a href="../deploy/A.4.Regenerate-the-authentication-command-for-the-node-to-join-the-cluster.html">
+            
+                    
+                    A.4 重新生成用于节点加入集群的认证命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../deploy/B-chapter-deploy-GlusterFS-and-Heketi.html">
+            
+                <a href="../deploy/B-chapter-deploy-GlusterFS-and-Heketi.html">
+            
+                    
+                    B 部署 GlusterFS 及 Heketi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../deploy/B.1.deploy-GlusterFS-cluster.html">
+            
+                <a href="../deploy/B.1.deploy-GlusterFS-cluster.html">
+            
+                    
+                    B.1 部署 GlusterFS 集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../deploy/B.2.deploy-Heketi.html">
+            
+                <a href="../deploy/B.2.deploy-Heketi.html">
+            
+                    
+                    B.2 部署 Heketi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../deploy/B.2.1.install-and-start-Heketi-server.html">
+            
+                <a href="../deploy/B.2.1.install-and-start-Heketi-server.html">
+            
+                    
+                    B.2.1 安装并启动 Heketi 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../deploy/B.2.2.setup-Heketi-system-topology.html">
+            
+                <a href="../deploy/B.2.2.setup-Heketi-system-topology.html">
+            
+                    
+                    B.2.2 设置 Heketi 系统拓扑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter_2/2.kubernetes_quick_start.html">
+            
+                <a href="../chapter_2/2.kubernetes_quick_start.html">
+            
+                    
+                    第二章 kubernetes 快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter_2/2.1.core_object_of_kubernetes.html">
+            
+                <a href="../chapter_2/2.1.core_object_of_kubernetes.html">
+            
+                    
+                    2.1 Kubernetes 的核心对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../chapter_2/2.1.1.pod-resource-object.html">
+            
+                <a href="../chapter_2/2.1.1.pod-resource-object.html">
+            
+                    
+                    2.1.1 Pod 资源对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../chapter_2/2.1.2.controller.html">
+            
+                <a href="../chapter_2/2.1.2.controller.html">
+            
+                    
+                    2.1.2 Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../chapter_2/2.1.3.service.html">
+            
+                <a href="../chapter_2/2.1.3.service.html">
+            
+                    
+                    2.1.3 Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../chapter_2/2.1.4.deploy_the_main_process_of_the_application.html">
+            
+                <a href="../chapter_2/2.1.4.deploy_the_main_process_of_the_application.html">
+            
+                    
+                    2.1.4 部署应用程序的主体过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter_2/2.2.deploy_kubernetes_cluster.html">
+            
+                <a href="../chapter_2/2.2.deploy_kubernetes_cluster.html">
+            
+                    
+                    2.2 部署 Kubernetes 集群
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../chapter_2/2.2.1.kubeadm_deploy_tool.html">
+            
+                <a href="../chapter_2/2.2.1.kubeadm_deploy_tool.html">
+            
+                    
+                    2.2.1 kubeadm 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../chapter_2/2.2.2.cluster_cluster_operation_mode.html">
+            
+                <a href="../chapter_2/2.2.2.cluster_cluster_operation_mode.html">
+            
+                    
+                    2.2.2 集群运行模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../chapter_2/2.2.3.prepare_a_clustered_environment_for_hands-on_operations.html">
+            
+                <a href="../chapter_2/2.2.3.prepare_a_clustered_environment_for_hands-on_operations.html">
+            
+                    
+                    2.2.3 准备用于实践操作的集群环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../chapter_2/2.2.4.get_information_about_the_cluster_environment.html">
+            
+                <a href="../chapter_2/2.2.4.get_information_about_the_cluster_environment.html">
+            
+                    
+                    2.2.4 获取集群环境相关的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter_2/2.3.kubectl_use_the_basics_and_examples.html">
+            
+                <a href="../chapter_2/2.3.kubectl_use_the_basics_and_examples.html">
+            
+                    
+                    2.3 kubectl 使用基础与示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter_2/2.4.imperative_container_application_orchestration.html">
+            
+                <a href="../chapter_2/2.4.imperative_container_application_orchestration.html">
+            
+                    
+                    2.4 命令式容器应用编排
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../chapter_2/2.4.1.deploy_applications.html">
+            
+                <a href="../chapter_2/2.4.1.deploy_applications.html">
+            
+                    
+                    2.4.1 部署应用（Pod）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../chapter_2/2.4.2.Probe_pods_and_application_details.html">
+            
+                <a href="../chapter_2/2.4.2.Probe_pods_and_application_details.html">
+            
+                    
+                    2.4.2 探查 Pod 及应用详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../chapter_2/2.4.3.deploy_service_object.html">
+            
+                <a href="../chapter_2/2.4.3.deploy_service_object.html">
+            
+                    
+                    2.4.3 部署 Service 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../chapter_2/2.4.4.expansion_and_reduction.html">
+            
+                <a href="../chapter_2/2.4.4.expansion_and_reduction.html">
+            
+                    
+                    2.4.4 扩容和缩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../chapter_2/2.4.5.modify_and_delete_objects.html">
+            
+                <a href="../chapter_2/2.4.5.modify_and_delete_objects.html">
+            
+                    
+                    2.4.5 修改及删除对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3.Fundamentals_of_Resource_Management.html">
+            
+                <a href="3.Fundamentals_of_Resource_Management.html">
+            
+                    
+                    第三章 资源管理基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="3.1.resource_objects_and_api_groups.html">
+            
+                <a href="3.1.resource_objects_and_api_groups.html">
+            
+                    
+                    3.1 资源对象及API群组
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="3.1.1.Kubernetes的资源对象.html">
+            
+                <a href="3.1.1.Kubernetes的资源对象.html">
+            
+                    
+                    3.1.1 Kubernetes 的资源对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="3.1.2.Resources_and_their_organization_in_the_API.html">
+            
+                <a href="3.1.2.Resources_and_their_organization_in_the_API.html">
+            
+                    
+                    3.1.2 资源及其在API中的组织形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="3.1.3.access_kubernetes_REST_API.html">
+            
+                <a href="3.1.3.access_kubernetes_REST_API.html">
+            
+                    
+                    3.1.3 访问kubernetes REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="3.2.object_class_resource_format.html">
+            
+                <a href="3.2.object_class_resource_format.html">
+            
+                    
+                    3.2 对象类资源格式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="3.2.1.resource_allocation_checklist.html">
+            
+                <a href="3.2.1.resource_allocation_checklist.html">
+            
+                    
+                    3.2.1 资源配置清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="3.2.2.metadata_nested_field.html">
+            
+                <a href="3.2.2.metadata_nested_field.html">
+            
+                    
+                    3.2.2 metadata 嵌套字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2.3" data-path="3.2.3.spec_and_status_fields.html">
+            
+                <a href="3.2.3.spec_and_status_fields.html">
+            
+                    
+                    3.2.3 spec 和 status 字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="3.2.4.resource_allocation_list_format_document.html">
+            
+                <a href="3.2.4.resource_allocation_list_format_document.html">
+            
+                    
+                    3.2.4 资源配置清单格式文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="3.2.5.resource_object_management.html">
+            
+                <a href="3.2.5.resource_object_management.html">
+            
+                    
+                    3.2.5 资源对象管理方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="3.3.kubectl_command_and_resource_management.html">
+            
+                <a href="3.3.kubectl_command_and_resource_management.html">
+            
+                    
+                    3.3 kubectl 命令与资源管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="3.3.1.overview_of_resource_management_oprations.html">
+            
+                <a href="3.3.1.overview_of_resource_management_oprations.html">
+            
+                    
+                    3.3.1 资源管理操作概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="3.3.2.Basic_usage_of_kubectl.html">
+            
+                <a href="3.3.2.Basic_usage_of_kubectl.html">
+            
+                    
+                    3.3.2 kubectl 的基本用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="3.4.Manage_namespace_resources.html">
+            
+                <a href="3.4.Manage_namespace_resources.html">
+            
+                    
+                    3.4 管理名称空间资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="3.4.1.View_namespaces_and_their_resource_objects.html">
+            
+                <a href="3.4.1.View_namespaces_and_their_resource_objects.html">
+            
+                    
+                    3.4.1 查看名称空间及其资源对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="3.4.2.Manage_Namespace_resources.html">
+            
+                <a href="3.4.2.Manage_Namespace_resources.html">
+            
+                    
+                    3.4.2 管理 Namespace 资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="3.5.Basic_management_operations_for_Pod_resources.html">
+            
+                <a href="3.5.Basic_management_operations_for_Pod_resources.html">
+            
+                    
+                    3.5 Pod 资源的基础管理操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="3.5.1.Declarative_object_configuration_management.html">
+            
+                <a href="3.5.1.Declarative_object_configuration_management.html">
+            
+                    
+                    3.5.1 陈述式对象配置管理方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="3.5.2.Declarative_object_configuration_management.html">
+            
+                <a href="3.5.2.Declarative_object_configuration_management.html">
+            
+                    
+                    3.5.2 声明式对象配置管理方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter_4/4.Manage_pod_resource_objects.html">
+            
+                <a href="../chapter_4/4.Manage_pod_resource_objects.html">
+            
+                    
+                    第四章 管理 Pod 资源对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter_4/4.1.Containers_and_Pod_Resource_Objects.html">
+            
+                <a href="../chapter_4/4.1.Containers_and_Pod_Resource_Objects.html">
+            
+                    
+                    4.1 容器与 Pod 资源对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter_4/4.2.Container_for_managing_pod_objects.html">
+            
+                <a href="../chapter_4/4.2.Container_for_managing_pod_objects.html">
+            
+                    
+                    4.2 管理 Pod 对象的容器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../chapter_4/4.2.1.Image_and_its_acquisition_strategy.html">
+            
+                <a href="../chapter_4/4.2.1.Image_and_its_acquisition_strategy.html">
+            
+                    
+                    4.2.1 镜像及其获取策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../chapter_4/4.2.2.Exposed_port.html">
+            
+                <a href="../chapter_4/4.2.2.Exposed_port.html">
+            
+                    
+                    4.2.2 暴露端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../chapter_4/4.2.3.Customized_containerized_applications.html">
+            
+                <a href="../chapter_4/4.2.3.Customized_containerized_applications.html">
+            
+                    
+                    4.2.3 自定义运行的容器化应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.4" data-path="../chapter_4/4.2.4.Environment_variable.html">
+            
+                <a href="../chapter_4/4.2.4.Environment_variable.html">
+            
+                    
+                    4.2.4 环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5" data-path="../chapter_4/4.2.5.Network_Namespace_of_Shared_Nodes.html">
+            
+                <a href="../chapter_4/4.2.5.Network_Namespace_of_Shared_Nodes.html">
+            
+                    
+                    4.2.5 共享节点的网络名称空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6" data-path="../chapter_4/4.2.6.Setting_the_security_context_of_the_Pod_object.html">
+            
+                <a href="../chapter_4/4.2.6.Setting_the_security_context_of_the_Pod_object.html">
+            
+                    
+                    4.2.6 设置 Pod 对象的安全上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter_4/4.3.Tags_and_tag_selectors.html">
+            
+                <a href="../chapter_4/4.3.Tags_and_tag_selectors.html">
+            
+                    
+                    4.3 标签与标签选择器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../chapter_4/4.3.1.Label_overview.html">
+            
+                <a href="../chapter_4/4.3.1.Label_overview.html">
+            
+                    
+                    4.3.1 标签概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../chapter_4/4.3.2.Manage_resource_tags.html">
+            
+                <a href="../chapter_4/4.3.2.Manage_resource_tags.html">
+            
+                    
+                    4.3.2 管理资源标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../chapter_4/4.3.3.Label_selector.html">
+            
+                <a href="../chapter_4/4.3.3.Label_selector.html">
+            
+                    
+                    4.3.3 标签选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.4" data-path="../chapter_4/4.3.4.Pod_node_selector_nodeSelector.html">
+            
+                <a href="../chapter_4/4.3.4.Pod_node_selector_nodeSelector.html">
+            
+                    
+                    4.3.4 Pod 节点选择器 nodeSelector
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter_4/4.4.Resource_annotation.html">
+            
+                <a href="../chapter_4/4.4.Resource_annotation.html">
+            
+                    
+                    4.4 资源注解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="../chapter_4/4.4.1.View_resource_notes.html">
+            
+                <a href="../chapter_4/4.4.1.View_resource_notes.html">
+            
+                    
+                    4.4.1 查看资源注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2" data-path="../chapter_4/4.4.2.Management_resource_annotations.html">
+            
+                <a href="../chapter_4/4.4.2.Management_resource_annotations.html">
+            
+                    
+                    4.4.2 管理资源注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter_4/4.5.Pod_object_life_cycle.html">
+            
+                <a href="../chapter_4/4.5.Pod_object_life_cycle.html">
+            
+                    
+                    4.5 Pod 对象的生命周期
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.1" data-path="../chapter_4/4.5.1.Pod_Phase.html">
+            
+                <a href="../chapter_4/4.5.1.Pod_Phase.html">
+            
+                    
+                    4.5.1 Pod 的相位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.2" data-path="../chapter_4/4.5.2.Pod_creation_process.html">
+            
+                <a href="../chapter_4/4.5.2.Pod_creation_process.html">
+            
+                    
+                    4.5.2 Pod的创建过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.3" data-path="../chapter_4/4.5.3.Important_Words_in_the_Pod_Life_Cycle.html">
+            
+                <a href="../chapter_4/4.5.3.Important_Words_in_the_Pod_Life_Cycle.html">
+            
+                    
+                    4.5.3 Pod 生命周期中的重要行为
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.4" data-path="../chapter_4/4.5.4.Container_restart_strategy.html">
+            
+                <a href="../chapter_4/4.5.4.Container_restart_strategy.html">
+            
+                    
+                    4.5.4 容器的重启策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.5" data-path="../chapter_4/4.5.5.pod_termination_process.html">
+            
+                <a href="../chapter_4/4.5.5.pod_termination_process.html">
+            
+                    
+                    4.5.5 Pod 的终止过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter_4/4.6.Pod_survivability_probe.html">
+            
+                <a href="../chapter_4/4.6.Pod_survivability_probe.html">
+            
+                    
+                    4.6 Pod 存活性探测
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.6.1" data-path="../chapter_4/4.6.1.Setting_up_the_exec_probe.html">
+            
+                <a href="../chapter_4/4.6.1.Setting_up_the_exec_probe.html">
+            
+                    
+                    4.6.1 设置 exec 探针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6.2" data-path="../chapter_4/4.6.2.Setting_up_the_HTTP_probe.html">
+            
+                <a href="../chapter_4/4.6.2.Setting_up_the_HTTP_probe.html">
+            
+                    
+                    4.6.2 设置 HTTP 探针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6.3" data-path="../chapter_4/4.6.3.Setting_up_the_TCP_probe.html">
+            
+                <a href="../chapter_4/4.6.3.Setting_up_the_TCP_probe.html">
+            
+                    
+                    4.6.3 设置 TCP 探针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6.4" data-path="../chapter_4/4.6.4.Survivability_Probe_Behavior_Properties.html">
+            
+                <a href="../chapter_4/4.6.4.Survivability_Probe_Behavior_Properties.html">
+            
+                    
+                    4.6.4 存活性探测行为属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../chapter_4/4.7.Pod_Readiness_Detection.html">
+            
+                <a href="../chapter_4/4.7.Pod_Readiness_Detection.html">
+            
+                    
+                    4.7 Pod 就绪性探测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../chapter_4/4.8.Resource_requirements_and_resource_constraints.html">
+            
+                <a href="../chapter_4/4.8.Resource_requirements_and_resource_constraints.html">
+            
+                    
+                    4.8 资源需求及资源限制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.8.1" data-path="../chapter_4/4.8.1.Resource_requirements.html">
+            
+                <a href="../chapter_4/4.8.1.Resource_requirements.html">
+            
+                    
+                    4.8.1 资源需求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8.2" data-path="../chapter_4/4.8.2.Resource_constraints.html">
+            
+                <a href="../chapter_4/4.8.2.Resource_constraints.html">
+            
+                    
+                    4.8.2 资源限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8.3" data-path="../chapter_4/4.8.3.Container's_visible_resources.html">
+            
+                <a href="../chapter_4/4.8.3.Container's_visible_resources.html">
+            
+                    
+                    4.8.3 容器的可见资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8.4" data-path="../chapter_4/4.8.4.Pod_quality_of_service_resources.html">
+            
+                <a href="../chapter_4/4.8.4.Pod_quality_of_service_resources.html">
+            
+                    
+                    4.8.4 Pod 的服务质量类比啊
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter_5/5.Pod_controller.html">
+            
+                <a href="../chapter_5/5.Pod_controller.html">
+            
+                    
+                    第五章 Pod 控制器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter_5/5.1.About_pod_controller.html">
+            
+                <a href="../chapter_5/5.1.About_pod_controller.html">
+            
+                    
+                    5.1 关于 Pod 控制器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../chapter_5/5.1.1.pod_controller_overview.html">
+            
+                <a href="../chapter_5/5.1.1.pod_controller_overview.html">
+            
+                    
+                    5.1.1 Pod 控制器概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../chapter_5/5.1.2.Controllers_and_Pod_Objects.html">
+            
+                <a href="../chapter_5/5.1.2.Controllers_and_Pod_Objects.html">
+            
+                    
+                    5.1.2 控制器与 Pod 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../chapter_5/5.1.3.pod_template_resources.html">
+            
+                <a href="../chapter_5/5.1.3.pod_template_resources.html">
+            
+                    
+                    5.1.3 Pod 模版资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter_5/5.2.ReplicaSet_controller.html">
+            
+                <a href="../chapter_5/5.2.ReplicaSet_controller.html">
+            
+                    
+                    5.2 ReplicaSet 控制器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../chapter_5/5.2.1.ReplicaSet_overview.html">
+            
+                <a href="../chapter_5/5.2.1.ReplicaSet_overview.html">
+            
+                    
+                    5.2.1 ReplicaSet 概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../chapter_5/5.2.2.Create_ReplicaSet.html">
+            
+                <a href="../chapter_5/5.2.2.Create_ReplicaSet.html">
+            
+                    
+                    5.2.2 创建 ReplicaSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../chapter_5/5.2.3.Pod_objects_under_ReplicaSet_control.html">
+            
+                <a href="../chapter_5/5.2.3.Pod_objects_under_ReplicaSet_control.html">
+            
+                    
+                    5.2.3 ReplicaSet 管控下的 Pod 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../chapter_5/5.2.4.Update_the_ReplicaSet_controller.html">
+            
+                <a href="../chapter_5/5.2.4.Update_the_ReplicaSet_controller.html">
+            
+                    
+                    5.2.4 更新 ReplicaSet 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.5" data-path="../chapter_5/5.2.5.Delete_the_ReplicaSet_controller_resource.html">
+            
+                <a href="../chapter_5/5.2.5.Delete_the_ReplicaSet_controller_resource.html">
+            
+                    
+                    5.2.5 删除 ReplicaSet 控制器资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter_5/5.3.Deployment_controller.html">
+            
+                <a href="../chapter_5/5.3.Deployment_controller.html">
+            
+                    
+                    5.3 Deployment 控制器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../chapter_5/5.3.1.Create_Deployment.html">
+            
+                <a href="../chapter_5/5.3.1.Create_Deployment.html">
+            
+                    
+                    5.3.1 创建 Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../chapter_5/5.3.2.Update_strategy.html">
+            
+                <a href="../chapter_5/5.3.2.Update_strategy.html">
+            
+                    
+                    5.3.2 更新策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.2.3 spec 和 status 字段</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="323-spec-&#x548C;-status-&#x5B57;&#x6BB5;"><a name="323-spec-&#x548C;-status-&#x5B57;&#x6BB5;" class="plugin-anchor" href="#323-spec-&#x548C;-status-&#x5B57;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.3 spec &#x548C; status &#x5B57;&#x6BB5;</h1>
+<p>Kubernetes &#x7528; spec &#x6765;&#x63CF;&#x8FF0;&#x6240;&#x671F;&#x671B;&#x7684;&#x5BF9;&#x8C61;&#x5E94;&#x8BE5;&#x5177;&#x6709;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x7528; status &#x5B57;&#x6BB5;&#x6765;&#x8BB0;&#x5F55;&#x5BF9;&#x8C61;&#x5728;&#x7CFB;&#x7EDF;&#x4E0A;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF0C;&#x56E0;&#x6B64; status &#x5B57;&#x6BB5;&#x4EC5;&#x5BF9;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;&#x624D;&#x6709;&#x610F;&#x4E49;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x90FD;&#x5C5E;&#x4E8E;&#x5D4C;&#x5957;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x3002;&#x5728;&#x5B9A;&#x4E49;&#x8D44;&#x6E90;&#x914D;&#x7F6E;&#x6E05;&#x5355;&#x65F6;&#xFF0C;spec&#x662F;&#x5FC5;&#x987B;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#x7684;&#x76EE;&#x6807;&#x72B6;&#x6001;&#xFF0C;&#x5373;&#x7528;&#x6237;&#x671F;&#x671B;&#x5BF9;&#x8C61;&#x9700;&#x8981;&#x8868;&#x73B0;&#x51FA;&#x6765;&#x7684;&#x7279;&#x5F81;&#x3002;status&#x5B57;&#x6BB5;&#x5219;&#x8BB0;&#x5F55;&#x4E86;&#x5BF9;&#x8C61;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF08;&#x6216;&#x5B9E;&#x9645;&#x72B6;&#x6001;&#xFF09;&#xFF0C;&#x6B64;&#x5B57;&#x6BB5;&#x503C;&#x7531; Kubernete &#x7CFB;&#x7EDF;&#x8D1F;&#x8D23;&#x586B;&#x5145;&#x6216;&#x66F4;&#x65B0;&#xFF0C;&#x7528;&#x6237;&#x4E0D;&#x80FD;&#x624B;&#x52A8;&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x3002;Master &#x7684; controller-manager &#x901A;&#x8FC7;&#x76F8;&#x5E94;&#x7684;&#x63A7;&#x5236;&#x5668;&#x7EC4;&#x4EF6;&#x52A8;&#x6001;&#x7BA1;&#x7406;&#x5E76;&#x786E;&#x4FDD;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x9645;&#x72B6;&#x6001;&#x5339;&#x914D;&#x7528;&#x6237;&#x6240;&#x671F;&#x671B;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4ED6;&#x662F;&#x4E00;&#x79CD;&#x8C03;&#x548C;&#xFF08;reconsiliation&#xFF09;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;Deployment &#x662F;&#x4E00;&#x79CD;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x96C6;&#x7FA4;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x5E94;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x521B;&#x5EFA; Deployment &#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4E3A;&#x76EE;&#x6807; Deployment &#x5BF9;&#x8C61;&#x8BBE;&#x5B9A; spec&#xFF0C;&#x6307;&#x5B9A;&#x671F;&#x671B;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x7684;pod&#x526F;&#x672C;&#x6570;&#x91CF;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x4EE5;&#x53CA;pod&#x6A21;&#x677F;&#x7B49;&#x3002;Kubernetets &#x7CFB;&#x7EDF;&#x8BFB;&#x53D6;&#x5F85;&#x521B;&#x5EFA;&#x7684; Deployment &#x5BF9;&#x8C61;&#x7684;&#x91CF;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x4EE5;&#x53CA;Pod&#x6A21;&#x677F;&#x7B49;&#x3002;Kubernetes&#x7CFB;&#x7EDF;&#x8BFB;&#x53D6;&#x5F85;&#x521B;&#x5EFA;&#x7684;Deployment&#x5BF9;&#x8C61;&#x7684;spec&#x4EE5;&#x53CA;&#x7CFB;&#x7EDF;&#x4E0A;&#x76F8;&#x5E94;&#x7684;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF0C;&#x5FC5;&#x8981;&#x65F6;&#x8FDB;&#x884C;&#x5BF9;&#x8C61;&#x66F4;&#x65B0;&#x4EE5;&#x786E;&#x4FDD;status&#x5B57;&#x6BB5;&#x543B;&#x5408;spec&#x5B57;&#x6BB5;&#x4E2D;&#x671F;&#x671B;&#x7684;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x5176;&#x4E2D;&#x4EFB;&#x4E00;&#x5B9E;&#x4F8B;&#x51FA;&#x73B0;&#x4E86;&#x95EE;&#x9898;&#xFF08;status&#x5B57;&#x6BB5;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;Kubernetes&#x7CFB;&#x7EDF;&#x5219;&#x9700;&#x8981;&#x53CA;&#x65F6;&#x5BF9;spec&#x548C;status&#x5B57;&#x6BB5;&#x7684;&#x5DEE;&#x5F02;&#x505A;&#x51FA;&#x54CD;&#x5E94;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x8865;&#x8DB3;&#x7F3A;&#x5931;&#x7684;Pod&#x526F;&#x672C;&#x6570;&#x76EE;&#x7B49;&#x3002;</p>
+<p>spec&#x5B57;&#x6BB5;&#x5D4C;&#x5957;&#x7684;&#x5B57;&#x6BB5;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x6765;&#x8BF4;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;&#x5177;&#x4F53;&#x9700;&#x8981;&#x53C2;&#x7167;Kubernetes API&#x53C2;&#x8003;&#x624B;&#x518C;&#x4E2D;&#x7684;&#x8BF4;&#x660E;&#x5206;&#x522B;&#x8FDB;&#x884C;&#x83B7;&#x53D6;&#xFF0C;&#x6838;&#x5FC3;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x7684;&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x5B57;&#x6BB5;&#x5C06;&#x4F1A;&#x518D;&#x672C;&#x4E66;&#x540E;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x8FDB;&#x884C;&#x8BB2;&#x89E3;&#x3002;</p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.2.2.metadata_nested_field.html" class="navigation navigation-prev " aria-label="Previous page: 3.2.2 metadata 嵌套字段">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.2.4.resource_allocation_list_format_document.html" class="navigation navigation-next " aria-label="Next page: 3.2.4 资源配置清单格式文档">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.2.3 spec 和 status 字段","level":"1.5.2.3","depth":3,"next":{"title":"3.2.4 资源配置清单格式文档","level":"1.5.2.4","depth":3,"path":"chapter_3/3.2.4.resource_allocation_list_format_document.md","ref":"chapter_3/3.2.4.resource_allocation_list_format_document.md","articles":[]},"previous":{"title":"3.2.2 metadata 嵌套字段","level":"1.5.2.2","depth":3,"path":"chapter_3/3.2.2.metadata_nested_field.md","ref":"chapter_3/3.2.2.metadata_nested_field.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","github","todo","terminal","anchors","edit-link","image-captions","image-wrapper","popup","custom-favicon"],"root":".","styles":{"website":"assets/css/WebStyle.css","pdf":"assets/css/PdfStyle.css","mobi":"assets/css/MobiStyle.css","epub":"assets/css/EpubStyle.css"},"pluginsConfig":{"image-wrapper":{},"github":{"url":"https://github.com/renkeju/k8s-docs"},"todo":{},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"serif","size":2},"highlight":{},"favicon":"images/favicon.png","custom-favicon":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"编辑这个页面","base":"https://github.com/renkeju/k8s-docs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_LEVEL_ - _CAPTION_ ","images":{"1.1.1":{"skip":true},"1.1.2":{"skip":true}},"variable_name":"_pictures"}},"theme":"default","author":"renkeju","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"index.html#fig1.1.1","level":"1.1","list_caption":"Figure: Kubernetes","alt":"Kubernetes","nro":1,"url":"/images/kubernetes-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Kubernetes","attributes":{},"skip":true,"key":"1.1.1"},{"backlink":"index.html#fig1.1.2","level":"1.1","list_caption":"Figure: Build Status","alt":"Build Status","nro":2,"url":"https://travis-ci.com/renkeju/k8s-docs.svg?branch=master","index":2,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Build Status","attributes":{},"skip":true,"key":"1.1.2"},{"backlink":"deploy/A.1.1.deploy-target.html#fig1.2.1.1.1","level":"1.2.1.1","list_caption":"Figure: Kubernetes 集群部署目标示意图","alt":"Kubernets 集群部署目标示意图","nro":3,"url":"/images/deploy/Kubernetes-cluster-deploy-target-viewer.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Kubernetes 集群部署目标示意图","attributes":{},"title":"Kubernetes 集群部署目标示意图","skip":false,"key":"1.2.1.1.1"},{"backlink":"deploy/B-chapter-deploy-GlusterFS-and-Heketi.html#fig1.3.1","level":"1.3","list_caption":"Figure: GlusterFS 架构","alt":"GlusterFS 架构","nro":4,"url":"/images/deploy/GlusterFS-Arch.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"GlusterFS 架构","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"deploy/B.2.deploy-Heketi.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: Heketi 架构","alt":"Heketi 架构","nro":5,"url":"/images/deploy/heketi-arch.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Heketi 架构","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"chapter_2/2.1.1.pod-resource-object.html#fig1.4.1.1.1","level":"1.4.1.1","list_caption":"Figure: Pod 通常由一个到多个共享网络和存储资源的容器组合而成","alt":"Pod 通常由一个到多个共享网络和存储资源的容器组合而成","nro":6,"url":"/images/chapter_2/pod-architecture.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Pod 通常由一个到多个共享网络和存储资源的容器组合而成","attributes":{},"skip":false,"key":"1.4.1.1.1"},{"backlink":"chapter_2/2.1.2.controller.html#fig1.4.1.2.1","level":"1.4.1.2","list_caption":"Figure: Replication Controller","alt":"Replication Controller","nro":7,"url":"/images/chapter_2/Replication-Controller.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Replication Controller","attributes":{},"skip":false,"key":"1.4.1.2.1"},{"backlink":"chapter_2/2.1.2.controller.html#fig1.4.1.2.2","level":"1.4.1.2","list_caption":"Figure: Horizontal Pod Autoscaler","alt":"Horizontal Pod Autoscaler","nro":8,"url":"/images/chapter_2/Horizontal-Pod-Autoscaler.png","index":2,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Horizontal Pod Autoscaler","attributes":{},"skip":false,"key":"1.4.1.2.2"},{"backlink":"chapter_2/2.1.3.service.html#fig1.4.1.3.1","level":"1.4.1.3","list_caption":"Figure: Service 对象功能示意图","alt":"Service 对象功能示意图","nro":9,"url":"/images/chapter_2/Service_object_function_diagram.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Service 对象功能示意图","attributes":{},"skip":false,"key":"1.4.1.3.1"},{"backlink":"chapter_2/2.1.4.deploy_the_main_process_of_the_application.html#fig1.4.1.4.1","level":"1.4.1.4","list_caption":"Figure: 应用程序简单的部署示例","alt":"应用程序简单的部署示例","nro":10,"url":"/images/chapter_2/deploy_the_main_process_of_the_application.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"应用程序简单的部署示例","attributes":{},"skip":false,"key":"1.4.1.4.1"},{"backlink":"chapter_2/2.2.1.kubeadm_deploy_tool.html#fig1.4.2.1.1","level":"1.4.2.1","list_caption":"Figure: kubeadm 功能示意图","alt":"kubeadm 功能示意图","nro":11,"url":"/images/chapter_2/kubeadm_functional_diagram.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"kubeadm 功能示意图","attributes":{},"skip":false,"key":"1.4.2.1.1"},{"backlink":"chapter_2/2.2.2.cluster_cluster_operation_mode.html#fig1.4.2.2.1","level":"1.4.2.2","list_caption":"Figure: kubernetes 集群的运行模式","alt":"kubernetes 集群的运行模式","nro":12,"url":"/images/chapter_2/kubernete_cluster_operation_mode.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"kubernetes 集群的运行模式","attributes":{},"skip":false,"key":"1.4.2.2.1"},{"backlink":"chapter_2/2.2.3.prepare_a_clustered_environment_for_hands-on_operations.html#fig1.4.2.3.1","level":"1.4.2.3","list_caption":"Figure: Kubernetes 集群部署目标示意图","alt":"Kubernetes 集群部署目标示意图","nro":13,"url":"/images/deploy/Kubernetes-cluster-deploy-target-viewer.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Kubernetes 集群部署目标示意图","attributes":{},"skip":false,"key":"1.4.2.3.1"},{"backlink":"chapter_2/2.4.1.deploy_applications.html#fig1.4.4.1.1","level":"1.4.4.1","list_caption":"Figure: Deployment 对象 myapp 及其创建的 Pod 对象","alt":"Deployment 对象 myapp 及其创建的 Pod 对象","nro":14,"url":"/images/chapter_2/Deployment对象myapp及创建的Pod对象.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Deployment 对象 myapp 及其创建的 Pod 对象","attributes":{},"skip":false,"key":"1.4.4.1.1"},{"backlink":"chapter_2/2.4.1.deploy_applications.html#fig1.4.4.1.2","level":"1.4.4.1","list_caption":"Figure: 访问 Pod 中容器化应用服务程序","alt":"访问 Pod 中容器化应用服务程序","nro":15,"url":"/images/chapter_2/访问Pod中容器化应用服务程序.png","index":2,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"访问 Pod 中容器化应用服务程序","attributes":{},"skip":false,"key":"1.4.4.1.2"},{"backlink":"chapter_2/2.4.3.deploy_service_object.html#fig1.4.4.3.1","level":"1.4.4.3","list_caption":"Figure: Service 对象在 Pod 对象前端添加了一个固定访问层","alt":"Service 对象在 Pod 对象前端添加了一个固定访问层","nro":16,"url":"/images/chapter_2/Service对象在Pod对象前端添加了一个固定的访问层.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Service 对象在 Pod 对象前端添加了一个固定访问层","attributes":{},"skip":false,"key":"1.4.4.3.1"},{"backlink":"chapter_2/2.4.4.expansion_and_reduction.html#fig1.4.4.4.1","level":"1.4.4.4","list_caption":"Figure: Deployment 对象规模扩增完成","alt":"Deployment 对象规模扩增完成","nro":17,"url":"/images/chapter_2/Deployment对象规模扩增完成.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Deployment 对象规模扩增完成","attributes":{},"skip":false,"key":"1.4.4.4.1"},{"backlink":"chapter_3/3.1.resource_objects_and_api_groups.html#fig1.5.1.1","level":"1.5.1","list_caption":"Figure: 集合、资源和子资源","alt":"集合、资源和子资源","nro":18,"url":"/images/chapter_3/集合、资源和子资源.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"集合、资源和子资源","attributes":{},"skip":false,"key":"1.5.1.1"},{"backlink":"chapter_3/3.1.1.Kubernetes的资源对象.html#fig1.5.1.1.1","level":"1.5.1.1","list_caption":"Figure: Kubernetes 常用资源对象","alt":"Kubernetes 常用资源对象","nro":19,"url":"/images/chapter_3/kubenetes常用资源对象.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Kubernetes 常用资源对象","attributes":{},"skip":false,"key":"1.5.1.1.1"},{"backlink":"chapter_3/3.2.5.resource_object_management.html#fig1.5.2.5.1","level":"1.5.2.5","list_caption":"Figure: 基于资源配置清单管理对象","alt":"基于资源配置清单管理对象","nro":20,"url":"/images/chapter_3/基于资源配置清单管理对象.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"基于资源配置清单管理对象","attributes":{},"skip":false,"key":"1.5.2.5.1"},{"backlink":"chapter_4/4.1.Containers_and_Pod_Resource_Objects.html#fig1.6.1.1","level":"1.6.1","list_caption":"Figure: Sidecar pattern","alt":"Sidecar pattern","nro":21,"url":"/images/chapter_4/Sidecar_pattern.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Sidecar pattern","attributes":{},"skip":false,"key":"1.6.1.1"},{"backlink":"chapter_4/4.1.Containers_and_Pod_Resource_Objects.html#fig1.6.1.2","level":"1.6.1","list_caption":"Figure: Ambassador pattern","alt":"Ambassador pattern","nro":22,"url":"/images/chapter_4/Ambassador_pattern.png","index":2,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Ambassador pattern","attributes":{},"skip":false,"key":"1.6.1.2"},{"backlink":"chapter_4/4.1.Containers_and_Pod_Resource_Objects.html#fig1.6.1.3","level":"1.6.1","list_caption":"Figure: Adapter pattern","alt":"Adapter pattern","nro":23,"url":"/images/chapter_4/Adapter_pattern.png","index":3,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Adapter pattern","attributes":{},"skip":false,"key":"1.6.1.3"},{"backlink":"chapter_4/4.2.1.Image_and_its_acquisition_strategy.html#fig1.6.2.1.1","level":"1.6.2.1","list_caption":"Figure: Docker及其Registry","alt":"Docker及其Registry","nro":24,"url":"/images/chapter_4/Docker及其Registry.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Docker及其Registry","attributes":{},"skip":false,"key":"1.6.2.1.1"},{"backlink":"chapter_4/4.2.2.Exposed_port.html#fig1.6.2.2.1","level":"1.6.2.2","list_caption":"Figure: 通过 hostIP 和 hostPort 暴露容器服务","alt":"通过 hostIP 和 hostPort 暴露容器服务","nro":25,"url":"/images/chapter_4/通过hostIP和hostPort暴露容器服务.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"通过 hostIP 和 hostPort 暴露容器服务","attributes":{},"skip":false,"key":"1.6.2.2.1"},{"backlink":"chapter_4/4.2.5.Network_Namespace_of_Shared_Nodes.html#fig1.6.2.5.1","level":"1.6.2.5","list_caption":"Figure: Pod 对象的网络名称空间","alt":"Pod 对象的网络名称空间","nro":26,"url":"/images/chapter_4/Pod对象的网络空间名称.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Pod 对象的网络名称空间","attributes":{},"skip":false,"key":"1.6.2.5.1"},{"backlink":"chapter_4/4.3.1.Label_overview.html#fig1.6.3.1.1","level":"1.6.3.1","list_caption":"Figure: 多维度标签使用示例","alt":"多维度标签使用示例","nro":27,"url":"/images/chapter_4/多维度标签使用示例.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"多维度标签使用示例","attributes":{},"skip":false,"key":"1.6.3.1.1"},{"backlink":"chapter_4/4.5.1.Pod_Phase.html#fig1.6.5.1.1","level":"1.6.5.1","list_caption":"Figure: Pod 的生命周期","alt":"Pod 的生命周期","nro":28,"url":"/images/chapter_4/Pod的生命周期.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Pod 的生命周期","attributes":{},"skip":false,"key":"1.6.5.1.1"},{"backlink":"chapter_4/4.5.2.Pod_creation_process.html#fig1.6.5.2.1","level":"1.6.5.2","list_caption":"Figure: Pod 资源对象创建过程","alt":"Pod 资源对象创建过程","nro":29,"url":"/images/chapter_4/Pod资源对象创建过程.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Pod 资源对象创建过程","attributes":{},"skip":false,"key":"1.6.5.2.1"},{"backlink":"chapter_4/4.5.5.pod_termination_process.html#fig1.6.5.5.1","level":"1.6.5.5","list_caption":"Figure: Pod 的终止过程","alt":"Pod 的终止过程","nro":30,"url":"/images/chapter_4/Pod终止过程.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Pod 的终止过程","attributes":{},"skip":false,"key":"1.6.5.5.1"},{"backlink":"chapter_4/4.8.Resource_requirements_and_resource_constraints.html#fig1.6.8.1","level":"1.6.8","list_caption":"Figure: 容器资源需求及资源限制示意图","alt":"容器资源需求及资源限制示意图","nro":31,"url":"/images/chapter_4/容器资源需求及资源限制示意图.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"容器资源需求及资源限制示意图","attributes":{},"skip":false,"key":"1.6.8.1"},{"backlink":"chapter_4/4.8.4.Pod_quality_of_service_resources.html#fig1.6.8.4.1","level":"1.6.8.4","list_caption":"Figure: 资源需求、资源限额及OOM","alt":"资源需求、资源限额及OOM","nro":32,"url":"/images/chapter_4/资源需求、资源限额即OOM.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"资源需求、资源限额及OOM","attributes":{},"skip":false,"key":"1.6.8.4.1"},{"backlink":"chapter_5/5.1.1.pod_controller_overview.html#fig1.7.1.1.1","level":"1.7.1.1","list_caption":"Figure: kube-controller-manager 及其控制器","alt":"kube-controller-manager 及其控制器","nro":33,"url":"/images/chapter_5/kube-controller-manager及其控制器.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"kube-controller-manager 及其控制器","attributes":{},"skip":false,"key":"1.7.1.1.1"},{"backlink":"chapter_5/5.1.1.pod_controller_overview.html#fig1.7.1.1.2","level":"1.7.1.1","list_caption":"Figure: 控制器的“和解”循环","alt":"控制器的“和解”循环","nro":34,"url":"/images/chapter_5/控制器的“和解”循环.png","index":2,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"控制器的“和解”循环","attributes":{},"skip":false,"key":"1.7.1.1.2"},{"backlink":"chapter_5/5.1.2.Controllers_and_Pod_Objects.html#fig1.7.1.2.1","level":"1.7.1.2","list_caption":"Figure: Deployment 控制器示例","alt":"Deployment 控制器示例","nro":35,"url":"/images/chapter_5/Deployment控制器示例.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Deployment 控制器示例","attributes":{},"skip":false,"key":"1.7.1.2.1"},{"backlink":"chapter_5/5.2.1.ReplicaSet_overview.html#fig1.7.2.1.1","level":"1.7.2.1","list_caption":"Figure: ReplicaSet 的控制循环","alt":"ReplicaSet 的控制循环","nro":36,"url":"/images/chapter_5/ReplicaSet的控制循环.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"ReplicaSet 的控制循环","attributes":{},"skip":false,"key":"1.7.2.1.1"},{"backlink":"chapter_5/5.2.4.Update_the_ReplicaSet_controller.html#fig1.7.2.4.1","level":"1.7.2.4","list_caption":"Figure: 直接更替所有 Pod 资源","alt":"直接更替所有 Pod 资源","nro":37,"url":"/images/chapter_5/直接更替所有Pod资源.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"直接更替所有 Pod 资源","attributes":{},"skip":false,"key":"1.7.2.4.1"},{"backlink":"chapter_5/5.2.4.Update_the_ReplicaSet_controller.html#fig1.7.2.4.2","level":"1.7.2.4","list_caption":"Figure: 滚动更替 Pod 资源","alt":"滚动更替 Pod 资源","nro":38,"url":"/images/chapter_5/滚动更替Pod资源.png","index":2,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"滚动更替 Pod 资源","attributes":{},"skip":false,"key":"1.7.2.4.2"},{"backlink":"chapter_5/5.3.Deployment_controller.html#fig1.7.3.1","level":"1.7.3","list_caption":"Figure: Deployment、ReplicaSets 和 Pods","alt":"Deployment、ReplicaSets 和 Pods","nro":39,"url":"/images/chapter_5/Deployment、ReplicaSets和Pods.png","index":1,"caption_template":"图 _PAGE_LEVEL_ - _CAPTION_ ","label":"Deployment、ReplicaSets 和 Pods","attributes":{},"skip":false,"key":"1.7.3.1"}]},"title":"Kubernetes Documentation","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"https://kubernetes.renkeju.com"},"gitbook":false,"sharing":{"twitter":false,"facebook":false,"all":false}},"gitbook":"3.2.3"},"file":{"path":"chapter_3/3.2.3.spec_and_status_fields.md","mtime":"2020-01-01T11:02:02.063Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-01T11:02:57.261Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
