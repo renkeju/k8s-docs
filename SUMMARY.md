@@ -110,4 +110,7 @@
         * [5.3.4 金丝雀发布](chapter_5/5.3.4.Canary_release.md)
         * [5.3.5 回滚Deployment控制器下的应用发布](chapter_5/5.3.5.Roll_back_the_application_release_under_the_Deployment_controller.md)
         * [5.3.6 扩容和缩容](chapter_5/5.3.6.Expand_and_shrink.md)
+    * [5.4 DaementSet 控制器](chapter_5/5.4.DaemonSet_controller.md)
+        * [5.4.1 创建DaemonSet资源对象](chapter_5/5.4.1.Create_DaemonSet_resource_object.md)
+        * [5.4.2 更新DaemonSet对象](chapter_5/5.4.2.Update_DaemonSet_object.md)
 
