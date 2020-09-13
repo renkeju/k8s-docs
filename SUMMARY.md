@@ -91,7 +91,7 @@
         * [4.8.1 资源需求](chapter_4/4.8.1.Resource_requirements.md)
         * [4.8.2 资源限制](chapter_4/4.8.2.Resource_constraints.md)
         * [4.8.3 容器的可见资源](chapter_4/4.8.3.Container's_visible_resources.md)
-        * [4.8.4 Pod 的服务质量类比啊](chapter_4/4.8.4.Pod_quality_of_service_resources.md)
+        * [4.8.4 Pod 的服务质量类比](chapter_4/4.8.4.Pod_quality_of_service_resources.md)
 * [第五章 Pod 控制器](chapter_5/5.Pod_controller.md)
     * [5.1 关于 Pod 控制器](chapter_5/5.1.About_pod_controller.md)
         * [5.1.1 Pod 控制器概述](chapter_5/5.1.1.pod_controller_overview.md)
