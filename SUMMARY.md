@@ -124,4 +124,7 @@
     * [5.7 ReplicationController](chapter_5/5.7.ReplicationController.md)
     * [5.8 Pod中断预算](chapter_5/5.8.Pod_interruption_budget.md)
     * [5.9 本章小结](chapter_5/5.9.chapter_summary.md)
+* [第六章 Service 和 Ingress](chapter_6/6.Service_and_Ingress.md)
+    * [6.1 Service资源及其实现模型](chapter_6/6.1.Service_resource_and_its_realization_model.md)
+        * [6.1.1 Service资源概述](chapter_6/6.1.1.Service_resource_overview.md)
 
