@@ -127,4 +127,9 @@
 * [第六章 Service 和 Ingress](chapter_6/6.Service_and_Ingress.md)
     * [6.1 Service资源及其实现模型](chapter_6/6.1.Service_resource_and_its_realization_model.md)
         * [6.1.1 Service资源概述](chapter_6/6.1.1.Service_resource_overview.md)
+        * [6.1.2 虚拟IP和服务代理](chapter_6/6.1.2.Virtual_IP_and_service_proxy.md)
+    * [6.2 Service资源的基础应用](chapter_6/6.2.Basic_application_of_Service_resources.md)
+        * [6.2.1 创建Service资源](chapter_6/6.2.1.Create_Service_Resources.md)
+        * [6.2.2 向Service对象请求服务](chapter_6/6.2.2.Request_service_from_Service_object.md)
+        * [6.2.3 Service会话粘性](chapter_6/6.2.3.Service_session_stickiness.md)
 
