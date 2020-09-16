@@ -132,4 +132,9 @@
         * [6.2.1 创建Service资源](chapter_6/6.2.1.Create_Service_Resources.md)
         * [6.2.2 向Service对象请求服务](chapter_6/6.2.2.Request_service_from_Service_object.md)
         * [6.2.3 Service会话粘性](chapter_6/6.2.3.Service_session_stickiness.md)
+    * [6.3 服务发现](chapter_6/6.3.Service_discovery.md)
+        * [6.3.1 服务发现概述](chapter_6/6.3.1.Service_discovery_overview.md)
+        * [6.3.2 服务发现方式：环境变量](chapter_6/6.3.2.Service_discovery_method:_environmental_edge.md)
+        * [6.3.3 ClusterDNS和服务发现](chapter_6/6.3.3.ClusterDNS_and_service_discovery.md)
+        * [6.3.4 服务发现方式：DNS](chapter_6/6.3.4.Service_discovery_method:_DNS.md)
 
