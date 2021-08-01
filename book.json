@@ -37,6 +37,7 @@
         "image-captions",
         "image-wrapper",
         "popup",
+	"yahei",
         "custom-favicon"
     ],
     "pluginsConfig": {
@@ -55,7 +56,7 @@
         },
         "fontSettings": {
             "theme": "night",
-            "family": "serif",
+            "family": "msyh",
             "size": 2
         },
         "image-captions": {
