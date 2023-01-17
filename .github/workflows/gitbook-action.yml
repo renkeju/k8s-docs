@@ -12,7 +12,7 @@ jobs:
     - name: Checkout action
       uses: actions/checkout@v1
     - name: Gitbook Action
-      uses: zanderzhao/gitbook-action@latest 
+      uses: zanderzhao/gitbook-action@v1.2.4
       with:
         token: ${{ secrets.PERSONAL_TOKEN }}
         time_zone: Asia/Shanghai
