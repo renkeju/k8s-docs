@@ -1,0 +1,21 @@
+name: 'Gitbook-Action'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout action
+      uses: actions/checkout@v1
+    - name: Gitbook Action
+      uses: zanderzhao/gitbook-action@latest 
+      with:
+        token: ${{ secrets.PERSONAL_TOKEN }}
+        time_zone: Asia/Shanghai
+        source_dir: source
+        source_edit_time: true
+        publish_commit_message: ${{ github.event.head_commit.message }}
