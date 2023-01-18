@@ -6,9 +6,9 @@
 
 操作系统、容器引擎、etcd 及 kubernetes 的相关版本分别如下：
 
-- [x] OS: CentOS 7.4 x86_64
-- [x] Container runtime: Docker 18.09 ce
-- [x] Kubernetes: 1.14.0
+- OS: CentOS 7.4 x86_64
+- Container runtime: Docker 18.09 ce
+- Kubernetes: 1.14.0
 
 各主机角色分配及 IP 地址如表 A-1所示。
 
