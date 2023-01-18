@@ -37,8 +37,7 @@
         "image-wrapper",
         "popup",
 	"yahei",
-        "custom-favicon",
-	"todo"
+        "custom-favicon"
     ],
     "pluginsConfig": {
         "favicon": "images/favicon.png",
