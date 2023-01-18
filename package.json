@@ -1,0 +1,26 @@
+{
+  "name": "k8s-docs",
+  "version": "1.0.0",
+  "description": "![Kubernetes](/images/kubernetes-logo.png)",
+  "main": "index.js",
+  "dependencies": {
+    "aproba": "^2.0.0",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-search-plus": "^1.0.3",
+    "gitbook-plugin-todo": "^0.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renkeju/k8s-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renkeju/k8s-docs/issues"
+  },
+  "homepage": "https://github.com/renkeju/k8s-docs#readme"
+}
