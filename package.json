@@ -4,10 +4,9 @@
   "description": "![Kubernetes](/images/kubernetes-logo.png)",
   "main": "index.js",
   "dependencies": {
-    "gitbook-plugin-search-plus": "^1.0.3",
     "aproba": "^2.0.0",
     "gitbook-plugin-github": "^2.0.0",
-    "todo": "^1.1.0",
+    "gitbook-plugin-search-plus": "^1.0.3",
     "gitbook-plugin-todo": "^0.1.3"
   },
   "devDependencies": {},

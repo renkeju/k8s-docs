@@ -31,14 +31,14 @@
         "search-plus",
         "github",
         "terminal",
-	"todo",
         "anchors",
         "edit-link",
         "image-captions",
         "image-wrapper",
         "popup",
 	"yahei",
-        "custom-favicon"
+        "custom-favicon",
+	"todo"
     ],
     "pluginsConfig": {
         "favicon": "images/favicon.png",
