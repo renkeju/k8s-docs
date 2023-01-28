@@ -1,4 +1,4 @@
-[1]: /images/deploy/GlusterFS-Arch.png
+[1]: /images/deploy/GlusterFS-Arch.drawio.png
 
 # B 部署 GlusterFS 及 Heketi
 

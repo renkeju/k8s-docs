@@ -1,4 +1,4 @@
-[1]: /images/deploy/heketi-arch.png
+[1]: /images/deploy/heketi-arch.drawio.png
 
 # B.2 部署 Heketi
 

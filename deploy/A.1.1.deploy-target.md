@@ -1,4 +1,4 @@
-[1]: /images/deploy/Kubernetes-cluster-deploy-target-viewer.png "Kubernetes 集群部署目标示意图"
+[1]: /images/deploy/Kubernetes-cluster-deploy-target-viewer.drawio.png "Kubernetes 集群部署目标示意图"
 
 # A.1.1 部署目标
 
